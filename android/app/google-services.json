@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "214656067669",
+    "project_id": "simublade-assignment",
+    "storage_bucket": "simublade-assignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214656067669:android:deabce43be5ebfa7758cdc",
+        "android_client_info": {
+          "package_name": "com.simublade_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214656067669-2s8q48opfmk1l1fe1sv33vh278c1bv5t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simublade_project",
+            "certificate_hash": "d9bc2d34eb565ec7ff0222fbdf3082949c7ba40c"
+          }
+        },
+        {
+          "client_id": "214656067669-a3s05udbh2o2lfdtqbunjlp2c9pig36g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simublade_project",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "214656067669-56ehta3oq8i7obvmbf01htehkd1u886o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT-7bDfzqZ7y1xCT80p-KfWWVYbr5tcEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214656067669-56ehta3oq8i7obvmbf01htehkd1u886o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
