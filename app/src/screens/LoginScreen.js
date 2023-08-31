@@ -19,7 +19,6 @@ import auth from '@react-native-firebase/auth';
 export default function LoginScreen({navigation, route}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const dispatch = useDispatch();
 
   const store = useSelector(s => s.authReducer);
@@ -108,7 +107,7 @@ export default function LoginScreen({navigation, route}) {
       const userdata = await loginUser(email, password);
       console.log('user->', userdata.user._user);
       const uid = userdata.user.uid;
-      await fetchData(uid, 'email');
+      await fetchData(uid, 'email' , userdata.user._user);
     } catch (error) {
       console.log('error', error);
       if (error.constructor == String) {
@@ -118,15 +117,16 @@ export default function LoginScreen({navigation, route}) {
   }
 
   async function fetchData(uid = '', via = '', data) {
-    const usersRef = db;
+    const usersRef = db; // user collection reference instance = usersref
 
     try {
       let firestoreDocument = await usersRef.doc(uid).get();
       if (!firestoreDocument.exists) {
         usersRef
-          .doc(data.uid)
+          .doc(uid)
           .set(data)
           .then(() => {
+            
             console.log('added to firestore');
             dispatch({
               type: ACTION_CONSTANTS.LOGIN_SUCCESSFUL,
